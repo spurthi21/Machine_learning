@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Performance Comparison</title>
+    <style>
+        body { font-family: sans-serif; background-color: #fafafa; padding: 40px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #2e7d32; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        /* Styling for the converted Pandas HTML table */
+        .data { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .data th { background-color: #4caf50; color: white; padding: 12px; text-align: left; }
+        .data td { padding: 10px; border-bottom: 1px solid #ddd; }
+        .data tr:hover { background-color: #f5f5f5; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #4caf50; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">&larr; Back to Predictor</a>
+        <h1>Model Evaluation Results</h1>
+        <p>Comparison of all 13 regressor models based on R2 Score, MAE, and MSE.</p>
+        
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
+</body>
+</html>

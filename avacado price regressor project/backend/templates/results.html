@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f1f8e9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; border-top: 10px solid #4caf50; }
+        h2 { color: #333; margin-bottom: 10px; }
+        .price { font-size: 3em; color: #2e7d32; margin: 20px 0; }
+        .model-info { color: #666; font-style: italic; margin-bottom: 30px; }
+        .back-btn { display: inline-block; padding: 10px 25px; background-color: #4caf50; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .back-btn:hover { background-color: #388e3c; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Predicted Average Price</h2>
+        <div class="model-info">Based on the <strong>{{ model_name }}</strong> model</div>
+        <div class="price">${{ prediction }}</div>
+        <p>Estimated price per single avocado.</p>
+        <a href="/" class="back-btn">Try Another Prediction</a>
+    </div>
+</body>
+</html>
